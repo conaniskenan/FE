@@ -1,0 +1,77 @@
+<!--
+ * @Author: hypocrisy
+ * @Date: 2021-07-08 18:28:00
+ * @LastEditors: hypocrisy
+ * @LastEditTime: 2021-07-08 18:42:47
+ * @FilePath: /tencent/html-css/布局/三列/定位.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      height: 40px;
+      background: lightblue;
+    }
+
+    .footer {
+      height: 100px;
+      background: lightcoral;
+    }
+
+    .main {
+      position: relative;
+      height: 800px;
+    }
+
+    .left {
+      background: rgb(224, 151, 151);
+      height: 100%;
+      width: 200px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .right {
+      background: rgb(168, 168, 236);
+      height: 100%;
+      width: 200px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .middle {
+      background: rgb(190, 248, 190);
+      height: 100%;
+      margin: 0 200px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="header"></div>
+  <div class="main">
+    <div class="middle">中间自适应给三列的父元素（main）， 加上 左margin 和 右margin（也有人使用
+      padding），将三列挤到中间来，这样左边和右边就会预留出位置。中间自适应给三列的父元素（main）， 加上 左margin 和 右margin（也有人使用
+      padding），将三列挤到中间来，这样左边和右边就会预留出位置。中间自适应给三列的父元素（main）， 加上 左margin 和 右margin（也有人使用
+    </div>
+    <div class="left">左侧定宽</div>
+    <div class="right">右侧定宽</div>
+  </div>
+  <div class="footer"></div>
+</body>
+
+</html>

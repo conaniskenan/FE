@@ -1,0 +1,65 @@
+<!--
+ * @Author: hypocrisy
+ * @Date: 2021-07-16 18:28:42
+ * @LastEditors: hypocrisy
+ * @LastEditTime: 2021-07-20 18:55:56
+ * @FilePath: /tencent/html-css/布局/flex.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      height: 200px;
+      border: 1px solid #000;
+      background-color: #eee;
+      display: flex;
+    }
+
+    .item {
+      height: 200px;
+      flex: none
+    }
+
+    .item:nth-child(1) {
+      background-color: rgb(190, 138, 138);
+    }
+
+    .item:nth-child(2) {
+      background-color: rgb(179, 80, 80);
+    }
+
+    .item:nth-child(3) {
+      background-color: rgb(147, 192, 87);
+    }
+
+    .item:nth-child(4) {
+      background-color: rgb(112, 126, 206);
+    }
+
+    .item:nth-child(5) {
+      background-color: rgb(153, 62, 123);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="item">的带回家看撒谎的啥接口的接口的啥接口的接口的</div>
+    <div class="item">的带回家看撒谎的啥接口的接口的</div>
+    <div class="item">的带回家看撒谎的啥接口的</div>
+    <div class="item">的带回家看撒谎的啥接口的</div>
+    <div class="item">的带回家看撒谎的啥接口的</div>
+  </div>
+  <script>
+    let oitem = document.querySelector('.item')
+    console.log(getComputedStyle(oitem).flexGrow, getComputedStyle(oitem).flexShrink, getComputedStyle(oitem).flexBasis)
+  </script>
+</body>
+
+</html>

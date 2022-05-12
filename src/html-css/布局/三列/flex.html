@@ -1,0 +1,75 @@
+<!--
+ * @Author: hypocrisy
+ * @Date: 2021-07-08 18:44:27
+ * @LastEditors: hypocrisy
+ * @LastEditTime: 2021-07-16 21:40:06
+ * @FilePath: /tencent/html-css/布局/三列/flex.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      width: 100%;
+      height: 200px;
+      background-color: #98af94;
+    }
+
+    .footer {
+      width: 100%;
+      height: 100px;
+      background-color: rgb(158, 145, 145);
+    }
+
+    .main {
+      display: flex;
+      height: 600px;
+    }
+
+    .left {
+      background: rgb(187, 126, 126);
+      flex-basis: 200px;
+      height: 100%;
+    }
+
+    .right {
+      background: rgb(164, 164, 231);
+      flex-basis: 200px;
+      height: 100%;
+    }
+
+    .middle {
+      background: rgb(153, 236, 153);
+      height: 100%;
+      flex: 1
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header"></div>
+  <div class="main">
+    <div class="left">左侧定宽</div>
+    <div class="middle">中间自适应给三列的父元素（main）， 加上 左margin 和 右margin（也有人使用
+      padding），中间自适应给三列的父元素（main）， 加上 左margin 和 右margin（也有人使用</div>
+    <div class="right">右侧定宽</div>
+  </div>
+  </div>
+  <div class="footer"></div>
+  <script>
+    let oitem = document.querySelector('.left')
+    console.log(getComputedStyle(oitem).flexGrow, getComputedStyle(oitem).flexShrink, getComputedStyle(oitem).flexBasis)
+  </script>
+</body>
+
+</html>

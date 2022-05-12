@@ -1,0 +1,86 @@
+<!--
+ * @Author: hypocrisy
+ * @Date: 2021-08-02 18:17:39
+ * @LastEditors: hypocrisy
+ * @LastEditTime: 2021-08-02 19:41:58
+ * @FilePath: /tencent/html-css/布局/图片懒加载.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      display: flex;
+      flex-wrap: wrap;
+      width: 600px;
+      justify-content: space-between;
+      margin-left: 100px;
+    }
+
+    .box img {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/1.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/2.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/3.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/4.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/5.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/6.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/7.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/8.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/9.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/10.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/11.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/12.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/13.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/14.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/15.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/16.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/17.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/18.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/19.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/20.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/21.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/22.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/23.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/24.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/25.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/26.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/27.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/28.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/29.jpeg">
+    <img alt="" src="../../img/placeholder.jpeg" data-src="../../img/30.jpeg">
+  </div>
+  <script>
+    function Observer() {
+      let oImgs = document.querySelectorAll('img')
+      const cb = (entries) => {
+        entries.forEach(item => {
+          if (item.isIntersecting) {
+            const image = item.target
+            image.src = image.getAttribute('data-src')
+            console.log('被加载')
+            observer.unobserve(image)
+          }
+        })
+      }
+      const observer = new IntersectionObserver(cb);
+      [...oImgs].forEach(item => {
+        observer.observe(item)
+      })
+    }
+    window.addEventListener('load', Observer)
+  </script>
+</body>
+
+</html>

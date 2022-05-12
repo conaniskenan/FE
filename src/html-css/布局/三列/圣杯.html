@@ -1,0 +1,88 @@
+<!--
+ * @Author: hypocrisy
+ * @Date: 2021-07-08 14:49:43
+ * @LastEditors: hypocrisy
+ * @LastEditTime: 2021-07-08 18:33:52
+ * @FilePath: /tencent/html-css/布局/三列/圣杯.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      height: 40px;
+      background: lightblue;
+    }
+
+    .footer {
+      height: 100px;
+      background: lightcoral;
+    }
+
+    .main {
+      padding-left: 200px;
+      padding-right: 200px;
+    }
+
+    .float {
+      float: left;
+    }
+
+    .center {
+      width: 100%;
+      background-color: lightgray;
+      height: 800px;
+    }
+
+    .left {
+      width: 200px;
+      height: 100%;
+      background-color: lightpink;
+      margin-left: -100%;
+      height: 800px;
+      position: relative;
+      left: -200px;
+    }
+
+    .right {
+      width: 200px;
+      height: 100%;
+      background-color: lightgreen;
+      margin-left: -200px;
+      height: 800px;
+      position: relative;
+      right: -200px;
+    }
+
+    .clear::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">头部</div>
+  <div class="main clear">
+    <div class="float center">中间自适应给三列的父元素（main）， 加上 左margin 和 右margin（也有人使用
+      padding），将三列挤到中间来，这样左边和右边就会预留出位置。中间自适应给三列的父元素（main）， 加上 左margin 和 右margin（也有人使用
+      padding），将三列挤到中间来，这样左边和右边就会预留出位置。中间自适应给三列的父元素（main）， 加上 左margin 和 右margin（也有人使用
+    </div>
+    <div class="float left">左列定宽</div>
+    <div class="float right">右列定宽</div>
+  </div>
+  <div class="footer">底部</div>
+</body>
+
+</html>

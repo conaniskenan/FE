@@ -1,0 +1,66 @@
+<!--
+ * @Author: hypocrisy
+ * @Date: 2021-07-08 22:13:25
+ * @LastEditors: hypocrisy
+ * @LastEditTime: 2021-07-08 22:19:43
+ * @FilePath: /tencent/html-css/布局/两列/flex.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      width: 100%;
+      height: 200px;
+      background-color: #98af94;
+    }
+
+    .footer {
+      width: 100%;
+      height: 100px;
+      background-color: rgb(158, 145, 145);
+    }
+
+    .main {
+      display: flex;
+    }
+
+    .left {
+      background: rgb(187, 126, 126);
+      width: 200px;
+      height: 600px;
+    }
+
+    .right {
+      background: rgb(164, 164, 231);
+      height: 600px;
+      flex: 1;
+      /* margin-left: 200px; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header"></div>
+  <div class="main">
+    <div class="left">左侧定宽</div>
+    <div class="right">中间自适应给三列的父元素（main）， 加上 左margin 和 右margin（也有人使用
+      padding），将三列挤到中间来，这样左边和右边就会预留出位置。中间自适应给三列的父元素（main）， 加上 左margin 和 右margin（也有人使用
+      padding），将三列挤到中间来，这样左边和右边就会预留出位置。中间自适应给三列的父元素（main）， 加上 左margin 和 右margin（也有人使用</div>
+  </div>
+  </div>
+  <div class="footer"></div>
+</body>
+
+</html>
