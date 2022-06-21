@@ -1,8 +1,6 @@
-const obj = {
-	fn(func) {
-		func()
-	},
+class Person {
+	static now = () => {
+		return Date.now()
+	}
 }
-obj.fn(function () {
-	console.log(this)
-})
+console.log(Person.now())
