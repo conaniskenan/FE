@@ -32,7 +32,7 @@ console.log(numbersequal(a,b)); //true
 JavaScript 函数有两个内部方法：[[Call]] 和 [[Construct]]。
 当通过 new 调用函数时，执行 [[Construct]] 方法，创建一个实例对象，然后再执行函数体，将 this 绑定到实例上。
 当直接调用的时候，执行 [[Call]] 方法，直接执行函数体。
-箭头函数并没有 [[Construct]] 方法，不能被用作构造函数，如果通过 new 的方式调用，会报错。
+箭头函数并没有 [[Construct]] 方法，不能被用作构造函数，如果通过 new 的方式调用会报错。
 4.没有 new.target
 5.没有原型->prototype
 --------------------------------------
